@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      discover:
+        locator:
+          enabled: true
+      routes:
+        - id: subida-service
+          uri: lb://subida-service
+          predicates: 
+            - Path=/ingresosSalidas/**
+            - Path=/file/**
+        - id: justificativo-service
+          uri: lb://justificativo-service
+          predicates:
+            - Path=/inasistencia/**
+        - id: autorizacion-service
+          uri: lb://autorizacion-service
+          predicates:
+            - Path=/horaExtra/**
+        - id: sueldo-service
+          uri: lb://sueldo-service
+          predicates:
+            - Path=/sueldo/**
+            - Path=/empleados/**
+        - id: complementario-service
+          uri: lb://complementario-service
+          predicates:
+            - Path=/atrasos/**
