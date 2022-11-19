@@ -8,25 +8,28 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: subida-service
+        - id: subida-service         # NO FUNCIONO
           uri: http://localhost:8001
           predicates: 
             - Path=/ingresosSalidas/**
+        - id: subida-service         # NO FUNCIONO
+          uri: http://localhost:8001
+          predicates: 
             - Path=/file/**
-        - id: justificativo-service
+        - id: justificativo-service  # Funciono
           uri: http://localhost:8002
           predicates:
             - Path=/inasistencia/**
-        - id: autorizacion-service
+        - id: autorizacion-service   # Funciono
           uri: http://localhost:8003
           predicates:
             - Path=/horaExtra/**
-        - id: sueldo-service
+        - id: sueldo-service         # NO FUNCIONO
           uri: http://localhost:8004
           predicates:
             - Path=/sueldo/**
             - Path=/empleados/**
-        - id: complementario-service
+        - id: complementario-service # Funciono
           uri: http://localhost:8005
           predicates:
             - Path=/atrasos/**
