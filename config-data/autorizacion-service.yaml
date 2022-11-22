@@ -1,2 +1,3 @@
 server:
   port: 8003
+  forward-headers-strategy: framework
