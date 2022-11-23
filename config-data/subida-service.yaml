@@ -1,3 +1,6 @@
+spring:
+  application:
+    name: subida-service
 server:
   port: 8001
   forward-headers-strategy: framework

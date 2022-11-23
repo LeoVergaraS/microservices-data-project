@@ -1,3 +1,6 @@
+spring:
+  application:
+    name: autorizacion-service
 server:
   port: 8003
   forward-headers-strategy: framework
