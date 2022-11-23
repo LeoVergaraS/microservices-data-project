@@ -6,7 +6,7 @@ spring:
     name: gateway-service
   cloud:
     gateway:
-      discover:
+      discovery:
         locator:
           enabled: true
       default-filters:
