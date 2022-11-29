@@ -23,10 +23,6 @@ spring:
           uri: lb://subida-service
           predicates: 
             - Path=/ingresosSalidas/**
-        - id: subida-service        
-          uri: lb://subida-service
-          predicates: 
-            - Path=/file/**
         - id: justificativo-service  
           uri: lb://justificativo-service
           predicates:
@@ -38,15 +34,7 @@ spring:
         - id: sueldo-service         
           uri: lb://sueldo-service
           predicates:
-            - Path=/sueldo/**
-        - id: sueldo-service         
-          uri: lb://sueldo-service
-          predicates:
-            - Path=/empleados/**
-        - id: sueldo-service
-          uri: lb://sueldo-service
-          predicates:
-            - Path=/autenticar/**
+            - Path=/sueldos/**
         - id: complementario-service 
           uri: lb://complementario-service
           predicates:
