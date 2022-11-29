@@ -18,7 +18,7 @@ spring:
             allowed-methods: "*"
             allowed-headers: "*"
             allow-credentials: true
-        routes:
+      routes:
         - id: subida-service         
           uri: lb://subida-service
           predicates: 
